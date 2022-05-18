@@ -1,0 +1,19 @@
+{
+  "name": "noda-repeat",
+  "version": "1.0.0",
+  "description": "rep to repeat nodajs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anatoliy-Mostovoy/noda-repeat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anatoliy-Mostovoy/noda-repeat/issues"
+  },
+  "homepage": "https://github.com/Anatoliy-Mostovoy/noda-repeat#readme"
+}
