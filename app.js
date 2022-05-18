@@ -1,7 +1,7 @@
 //TODO Создаем сервер
 
 const http = require("http");
-const fs = require("fs/promises"); //!! обязательно для работы с асинхронными запросами
+const fs = require("fs/promises");
 const path = require("path");
 
 const PORT = process.env.PORT || 8081;
@@ -13,5 +13,5 @@ http
     res.end(content);
   })
   .listen(PORT, () => {
-    console.log(`Server was start on port ${PORT}`);
+    console.log(`Server was start ${PORT}`);
   });
