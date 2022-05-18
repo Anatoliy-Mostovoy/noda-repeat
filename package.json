@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Anatoliy-Mostovoy/noda-repeat/issues"
   },
-  "homepage": "https://github.com/Anatoliy-Mostovoy/noda-repeat#readme"
+  "homepage": "https://github.com/Anatoliy-Mostovoy/noda-repeat#readme",
+  "dependencies": {
+    "commander": "^9.2.0"
+  }
 }

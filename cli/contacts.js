@@ -13,12 +13,12 @@ const readContacts = async () => {
     const contacts = JSON.parse(response);
     return contacts;
   } catch (error) {
-    console.log("Ошибка  в трай кетч");
+    console.log("Error in try...cath");
   }
 };
 
 console.log(
   readContacts().then((data) => {
-    console.log(data);
+    console.table(data);
   })
 );
