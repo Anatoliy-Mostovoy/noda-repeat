@@ -17,8 +17,25 @@ const readContacts = async () => {
   }
 };
 
-console.log(
-  readContacts().then((data) => {
-    console.table(data);
-  })
-);
+function listContacts() {
+  return readContacts();
+}
+
+function getContactById(contactId) {
+  // ...твой код
+}
+
+function removeContact(contactId) {
+  // ...твой код
+}
+
+function addContact(name, email, phone) {
+  // ...твой код
+}
+
+module.exports = {
+  listContacts,
+  getContactById,
+  removeContact,
+  addContact,
+};

@@ -1,3 +1,10 @@
+const {
+  listContacts,
+  getContactById,
+  removeContact,
+  addContact,
+} = require("./contacts.js");
+
 const { Command } = require("commander");
 const program = new Command();
 program
@@ -15,7 +22,14 @@ const argv = program.opts();
 function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
-      // ...
+      listContacts()
+        .then((contacts) => {
+          console.table(contacts);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
       break;
 
     case "get":
