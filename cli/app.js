@@ -4,7 +4,6 @@ const {
   removeContact,
   addContact,
 } = require("./contacts.js");
-
 const { Command } = require("commander");
 const program = new Command();
 program
@@ -24,6 +23,7 @@ function invokeAction({ action, id, name, email, phone }) {
     case "list":
       listContacts()
         .then((contacts) => {
+          console.log("Add new contact");
           console.table(contacts);
         })
         .catch((error) => {
@@ -37,7 +37,13 @@ function invokeAction({ action, id, name, email, phone }) {
       break;
 
     case "add":
-      // ... name email phone
+      addContact(name, email, phone)
+        .then((contact) => {
+          console.table(contact);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
       break;
 
     case "remove":

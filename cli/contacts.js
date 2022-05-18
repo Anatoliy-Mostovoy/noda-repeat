@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs/promises");
+const crypto = require("crypto");
 
 // console.log(__dirname);
 // console.log(path.join(__dirname, "contacts.json")); //* правильное обращение к файлу
@@ -29,8 +30,15 @@ function removeContact(contactId) {
   // ...твой код
 }
 
-function addContact(name, email, phone) {
-  // ...твой код
+async function addContact(name, email, phone) {
+  const contacts = await readContacts();
+  const newContact = { id: crypto.randomUUID(), name, email, phone };
+  contacts.push(newContact);
+  await fs.writeFile(
+    path.join(__dirname, "contacts.json"),
+    JSON.stringify(contacts, null, 2)
+  );
+  return newContact;
 }
 
 module.exports = {
