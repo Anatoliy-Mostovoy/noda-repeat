@@ -22,13 +22,15 @@ function listContacts() {
   return readContacts();
 }
 
-function getContactById(contactId) {
-  // ...твой код
+async function getContactById(contactId) {
+  const contacts = await readContacts();
+  const [contact] = contacts.filter((contact) => {
+    contact.id.toString() === contactId.toString();
+  });
+  return contacts[0];
 }
 
-function removeContact(contactId) {
-  // ...твой код
-}
+function removeContact() {}
 
 async function addContact(name, email, phone) {
   const contacts = await readContacts();
