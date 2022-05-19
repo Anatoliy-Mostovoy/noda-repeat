@@ -5,6 +5,7 @@ const app = express(); //* инициалищируем express приложен
 const PORT = process.env.PORT || 8081;
 
 app.use(express.json()); //* мидлвар для парса json в запросе. Записывает в req.body
+app.use(express.static("public")); //* даем публичный доступ к какому-то файлу на бэке. Без указания пути. Просто имя папки от куда тянуть данные
 
 app.post("/home", (req, res) => {
   console.log(req.body);
