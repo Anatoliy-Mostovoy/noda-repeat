@@ -1,6 +1,6 @@
 const { response } = require("express");
 const express = require("express");
-const app = express(); //* инициалищируем express приложение
+const app = express(); //* инициалищируем express приложение. Создаем экземпляр приложенич
 var morgan = require("morgan");
 
 const PORT = process.env.PORT || 8081;
