@@ -6,7 +6,7 @@
   "module": "CommonJS",
   "scripts": {
     "start": "node app.js",
-    "start:dev": "nodemon app.js"
+    "start:dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "dependencies": {
     "chalk": "^5.0.1",
     "commander": "^9.2.0",
+    "express": "^4.18.1",
     "nodemon": "^2.0.16"
   }
 }
